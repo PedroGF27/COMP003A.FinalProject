@@ -14,6 +14,7 @@ namespace COMP003A.FinalProject
             bool exit = false;
             while (!exit)
             {
+                //Choices for user
                 Console.WriteLine("- - - Inventory Tracker - - -");
                 Console.WriteLine("1. Add an Item");
                 Console.WriteLine("2. Remove an Item");
@@ -24,7 +25,7 @@ namespace COMP003A.FinalProject
                 int choice;
                 try
                 {
-                    choice = Convert.ToInt32(Console.ReadLine());
+                    choice = Convert.ToInt32(Console.ReadLine()); // converst to an integer
                 }
                 catch
                 {
@@ -46,6 +47,7 @@ namespace COMP003A.FinalProject
                             Console.WriteLine("\nCost of item/inventory: ");
                             double cost = Convert.ToDouble(Console.ReadLine());
 
+                            // create new inventory item and adds it to list
                             Inventory inventory = new Inventory(inventoryName, inventoryAmount, cost);
                             Inventories.Add(inventory);
                             break;
@@ -57,6 +59,7 @@ namespace COMP003A.FinalProject
                                 Console.Write("Enter Name of Item you want Removed: ");
                                 string removeInventory = Console.ReadLine();
 
+                                // Finds index of the item user chooses, checks if item is found, and if found it removes the item
                                 int itemRemoval = Inventories.FindIndex(inventory => inventory.InventoryName == removeInventory);
                                 if (itemRemoval != -1)
                                 {
@@ -76,6 +79,7 @@ namespace COMP003A.FinalProject
                             Console.Write("\nEnter Name of Item you want to Edit: ");
                             string edit = Console.ReadLine();
 
+                            // Find index of item, edit quantity and cost.
                             int itemEdit = Inventories.FindIndex(items => items.InventoryName == edit);
 
                             if (itemEdit != -1)
@@ -86,6 +90,7 @@ namespace COMP003A.FinalProject
                                 Console.Write($"Enter new cost for {edit}: ");
                                 double newValue = double.Parse(Console.ReadLine());
 
+                                // updates item cost and amount
                                 Inventories[itemEdit].InventoryAmount = amountUpdate;
                                 Inventories[itemEdit].Cost = newValue;
 
@@ -107,7 +112,7 @@ namespace COMP003A.FinalProject
 
                             Console.WriteLine("Showing Full Inventory...");
                             //InventoryUtility ShowInventory = new InventoryUtility();
-                            InventoryManager.ShowAllItems(Inventories);
+                            InventoryManager.ShowAllItems(Inventories); // shows all item in the inventory
                             break;
                         }
                     case 5:
@@ -116,6 +121,9 @@ namespace COMP003A.FinalProject
                             Console.WriteLine("Ending Program....");
                             break;
                         }
+                    default:
+                        Console.WriteLine("Try Again.");
+                        break;
 
                 }
 

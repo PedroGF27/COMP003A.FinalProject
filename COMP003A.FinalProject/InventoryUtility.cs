@@ -21,11 +21,22 @@ namespace COMP003A.FinalProject
             Console.WriteLine($"Item Name: {inventoryName}");
         }
 
+        /// <summary>
+        /// Gets item name, amount, and displays it
+        /// </summary>
+        /// <param name="inventoryName">Name of item</param>
+        /// <param name="inventoryAmount">Amount of item</param>
         public void InventoryDescription(string inventoryName, int inventoryAmount)
         {
             Console.WriteLine($"Item Name: {inventoryName}, Inventory Amount: {inventoryAmount}");
         }
 
+        /// <summary>
+        /// Gets user imput of amount, cost, and name to display them
+        /// </summary>
+        /// <param name="inventoryName"></param>
+        /// <param name="inventoryAmount"></param>
+        /// <param name="cost"></param>
         public void InventoryDescription(string inventoryName, int inventoryAmount, double cost)
         {
             Console.WriteLine($"Item Name: {inventoryName}, Inventory Amount: {inventoryAmount}, Inventory Cost: {cost}");

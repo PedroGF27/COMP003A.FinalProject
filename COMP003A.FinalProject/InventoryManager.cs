@@ -12,12 +12,21 @@ namespace COMP003A.FinalProject
         private List<Inventory> inventory = new List<Inventory>();
 
   
-
+        /// <summary>
+        /// Adds new inventory to list
+        /// </summary>
+        /// <param name="inventoryName"></param>
+        /// <param name="inventoryAmount"></param>
+        /// <param name="cost"></param>
         public void AddInventory(string inventoryName, int inventoryAmount, double cost)
         {
             inventory.Add(new Inventory(inventoryName, inventoryAmount, cost));
         }
 
+        /// <summary>
+        /// Displays all items in list.
+        /// </summary>
+        /// <param name="inventory"></param>
         public static void ShowAllItems(List<Inventory> inventory)
         {
             foreach (var item in inventory)

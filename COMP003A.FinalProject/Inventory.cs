@@ -47,8 +47,8 @@ namespace COMP003A.FinalProject
         public Inventory(string inventoryName, int inventoryAmount, double cost)
         {
             _inventoryAmount = inventoryAmount;
-            _inventoryName = inventoryName; 
-            _inventoryAmount = inventoryAmount; 
+            _inventoryName = inventoryName;
+            _cost = cost;
         }
 
         //public override string ToString()
