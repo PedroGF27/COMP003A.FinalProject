@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace COMP003A.FinalProject
 {
-    public abstract class Inventory
+    public class Inventory
     {
         // cost will be optional
         private string _inventoryName;
@@ -50,5 +50,20 @@ namespace COMP003A.FinalProject
             _inventoryName = inventoryName; 
             _inventoryAmount = inventoryAmount; 
         }
+
+        public override string ToString()
+        {
+            return $"Item name: {InventoryName} - Inventory Amount: {InventoryAmount} - Cost: {Cost}\n";
+        }
+
+        //public void ShowFullInventory()
+        //{
+        //    foreach (var inventory in )
+
+
+        //    //Console.WriteLine($"Item name: {InventoryName} - Inventory Amount: {InventoryAmount} - Cost: {Cost}\n");
+
+
+        //}
     }
 }

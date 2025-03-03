@@ -8,7 +8,8 @@ namespace COMP003A.FinalProject
     {
         static void Main(string[] args)
         {
-
+            InventoryUtility inventoryUtility = new InventoryUtility();
+            List<Inventory> Inventories = new List<Inventory>();
             bool exit = false;
             while (!exit)
             {
@@ -34,16 +35,18 @@ namespace COMP003A.FinalProject
                 {
                     case 1:
                         {
-                            InventoryUtility ItemDescription = new InventoryUtility();
+                            //InventoryUtility ItemDescription = new InventoryUtility();
                             Console.WriteLine("Item/Inventory name: ");
                             string inventoryName = Console.ReadLine();
 
                             Console.WriteLine("Item/Inventory Amount: ");
-                            int inventoryAmount = Convert.ToInt32(Console.ReadLine());
+                            int inventoryAmount = int.Parse(Console.ReadLine());
 
                             Console.WriteLine("Cost of item/inventory: ");
                             double cost = Convert.ToDouble(Console.ReadLine());
-                            
+
+                            Inventory fullInventory = new Inventory(inventoryName, inventoryAmount, cost);
+                            InventoryManager.AddInventory(fullInventory);
                             break;
                         }
                     case 2:
@@ -56,12 +59,14 @@ namespace COMP003A.FinalProject
 
                             break;
                         }
-                    case 4: 
+                    case 4:
                         {
-
+                            Console.WriteLine("Showing Full Inventory...");
+                            InventoryUtility ShowInventory = new InventoryUtility();
+                            ShowInventory.ShowFullInventory();
                             break;
                         }
-                    case 5: 
+                    case 5:
                         {
                             exit = true;
                             Console.WriteLine("Ending Program....");

@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace COMP003A.FinalProject
 {
-    public class InventoryUtility
+    public class InventoryUtility 
     {
+        
+
         /// <summary>
         /// Capture user Input of item name, amount, and cost.
         /// </summary>
@@ -28,5 +30,19 @@ namespace COMP003A.FinalProject
         {
             Console.WriteLine($"Item Name: {inventoryName}, Inventory Amount: {inventoryAmount}, Inventory Cost: {cost}");
         }
+
+        //private List<Inventory> inventories = new List<Inventory>();
+
+        //public void AddInventory()
+        //{
+
+        //}
+
+        //public void ShowFullInventory(Inventory inventory)
+        //{ 
+        //    Console.WriteLine($"Item name: {inventory.InventoryName} - Inventory Amount: {inventory.InventoryAmount} - Cost: {inventory.Cost}\n");
+               
+                    
+        //}
     }
 }
