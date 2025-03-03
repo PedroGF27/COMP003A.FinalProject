@@ -9,6 +9,7 @@ namespace COMP003A.FinalProject
         static void Main(string[] args)
         {
             InventoryUtility inventoryUtility = new InventoryUtility();
+            InventoryManager inventoryManager = new InventoryManager();
             List<Inventory> Inventories = new List<Inventory>();
             bool exit = false;
             while (!exit)
@@ -72,6 +73,11 @@ namespace COMP003A.FinalProject
                         }
                     case 3:
                         {
+                            inventoryManager.EditInventory();
+                            //Console.Write("Enter Name of Item you want to Edit: ");
+                            //string edit = Console.ReadLine();
+
+                            //int itemEdit = Inventories.FindIndex(items => items.InventoryName == edit);
 
                             break;
                         }

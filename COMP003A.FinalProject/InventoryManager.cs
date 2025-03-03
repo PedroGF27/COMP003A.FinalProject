@@ -10,6 +10,7 @@ namespace COMP003A.FinalProject
     {
         //private List<Inventory> inventories = new List<Inventory>();
         private List<Inventory> inventory = new List<Inventory>();
+
   
 
         public void AddInventory(string inventoryName, int inventoryAmount, double cost)
@@ -21,7 +22,30 @@ namespace COMP003A.FinalProject
         {
             foreach (var item in inventory)
             {
-                Console.WriteLine($"Item name: {item.InventoryName} - Inventory Amount: {item.InventoryAmount} - Cost: {item.Cost}\n");
+                Console.WriteLine($"Item name: {item.InventoryName} - Inventory Amount: {item.InventoryAmount} - Cost: ${item.Cost}\n");
+            }
+        }
+
+        public void EditInventory()
+        {
+            Console.Write("Enter Name of Item you want to Edit: ");
+            string edit = Console.ReadLine();
+
+            int itemEdit = inventory.FindIndex(items => items.InventoryName == edit);
+
+            if (itemEdit == -1)
+            {
+                Console.Write($"Enter new quantity for {edit}: ");
+                int amountUpdate = int.Parse(Console.ReadLine());
+
+                Console.Write($"Enter new cost for {edit}: ");
+                double newValue = double.Parse(Console.ReadLine());
+
+                Console.WriteLine("Edit Complete.");
+            }
+            else
+            {
+                Console.WriteLine("Please Try Again.");
             }
         }
 
