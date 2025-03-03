@@ -8,20 +8,30 @@ namespace COMP003A.FinalProject
 {
     public class InventoryManager
     {
-        private List<Inventory> inventories = new List<Inventory>();
+        //private List<Inventory> inventories = new List<Inventory>();
+        private List<Inventory> inventory = new List<Inventory>();
+  
 
-        public void AddInventory (Inventory inventory)
+        public void AddInventory(string inventoryName, int inventoryAmount, double cost)
         {
-            inventories.Add(inventory);
+            inventory.Add(new Inventory(inventoryName, inventoryAmount, cost));
         }
 
-        public void DisplayFullInventory()
+        public static void ShowAllItems(List<Inventory> inventory)
         {
-            foreach (var item in inventories)
+            foreach (var item in inventory)
             {
-                Console.WriteLine(item);
+                Console.WriteLine($"Item name: {item.InventoryName} - Inventory Amount: {item.InventoryAmount} - Cost: {item.Cost}\n");
             }
-
         }
+
+        //public void DisplayFullInventory()
+        //{
+        //    foreach (var item in inventories)
+        //    {
+        //        Console.WriteLine(item);
+        //    }
+
+        //}
     }
 }

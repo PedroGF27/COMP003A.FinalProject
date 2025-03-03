@@ -51,10 +51,10 @@ namespace COMP003A.FinalProject
             _inventoryAmount = inventoryAmount; 
         }
 
-        public override string ToString()
-        {
-            return $"Item name: {InventoryName} - Inventory Amount: {InventoryAmount} - Cost: {Cost}\n";
-        }
+        //public override string ToString()
+        //{
+        //    return $"Item name: {InventoryName} - Inventory Amount: {InventoryAmount} - Cost: {Cost}\n";
+        //}
 
         //public void ShowFullInventory()
         //{

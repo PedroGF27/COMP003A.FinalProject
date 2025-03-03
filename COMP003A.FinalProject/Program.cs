@@ -45,8 +45,8 @@ namespace COMP003A.FinalProject
                             Console.WriteLine("Cost of item/inventory: ");
                             double cost = Convert.ToDouble(Console.ReadLine());
 
-                            Inventory fullInventory = new Inventory(inventoryName, inventoryAmount, cost);
-                            InventoryManager.AddInventory(fullInventory);
+                            Inventory inventory = new Inventory(inventoryName, inventoryAmount, cost);
+                            Inventories.Add(inventory);
                             break;
                         }
                     case 2:
@@ -61,9 +61,10 @@ namespace COMP003A.FinalProject
                         }
                     case 4:
                         {
+
                             Console.WriteLine("Showing Full Inventory...");
-                            InventoryUtility ShowInventory = new InventoryUtility();
-                            ShowInventory.ShowFullInventory();
+                            //InventoryUtility ShowInventory = new InventoryUtility();
+                            InventoryManager.ShowAllItems(Inventories);
                             break;
                         }
                     case 5:
