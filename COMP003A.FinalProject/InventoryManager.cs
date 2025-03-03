@@ -28,25 +28,28 @@ namespace COMP003A.FinalProject
 
         public void EditInventory()
         {
-            Console.Write("Enter Name of Item you want to Edit: ");
-            string edit = Console.ReadLine();
+            //Console.Write("Enter Name of Item you want to Edit: ");
+            //string edit = Console.ReadLine();
 
-            int itemEdit = inventory.FindIndex(items => items.InventoryName == edit);
+            //int itemEdit = inventory.FindIndex(items => items.InventoryName == edit);
 
-            if (itemEdit == -1)
-            {
-                Console.Write($"Enter new quantity for {edit}: ");
-                int amountUpdate = int.Parse(Console.ReadLine());
+            //if (itemEdit != -1)
+            //{
+            //    Console.Write($"Enter new quantity for {edit}: ");
+            //    int amountUpdate = int.Parse(Console.ReadLine());
 
-                Console.Write($"Enter new cost for {edit}: ");
-                double newValue = double.Parse(Console.ReadLine());
+            //    Console.Write($"Enter new cost for {edit}: ");
+            //    double newValue = double.Parse(Console.ReadLine());
 
-                Console.WriteLine("Edit Complete.");
-            }
-            else
-            {
-                Console.WriteLine("Please Try Again.");
-            }
+            //    inventory[itemEdit].InventoryAmount = amountUpdate;
+            //    inventory[itemEdit].Cost = newValue;
+                 
+            //    Console.WriteLine("Edit Complete.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Please Try Again.");
+            //}
         }
 
         //public void ItemRemoval()

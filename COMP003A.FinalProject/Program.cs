@@ -40,10 +40,10 @@ namespace COMP003A.FinalProject
                             Console.WriteLine("Item/Inventory name: ");
                             string inventoryName = Console.ReadLine();
 
-                            Console.WriteLine("Item/Inventory Amount: ");
+                            Console.WriteLine("\nItem/Inventory Amount: ");
                             int inventoryAmount = int.Parse(Console.ReadLine());
 
-                            Console.WriteLine("Cost of item/inventory: ");
+                            Console.WriteLine("\nCost of item/inventory: ");
                             double cost = Convert.ToDouble(Console.ReadLine());
 
                             Inventory inventory = new Inventory(inventoryName, inventoryAmount, cost);
@@ -73,7 +73,28 @@ namespace COMP003A.FinalProject
                         }
                     case 3:
                         {
-                            inventoryManager.EditInventory();
+                            Console.Write("\nEnter Name of Item you want to Edit: ");
+                            string edit = Console.ReadLine();
+
+                            int itemEdit = Inventories.FindIndex(items => items.InventoryName == edit);
+
+                            if (itemEdit != -1)
+                            {
+                                Console.Write($"Enter new quantity for {edit}: ");
+                                int amountUpdate = int.Parse(Console.ReadLine());
+
+                                Console.Write($"Enter new cost for {edit}: ");
+                                double newValue = double.Parse(Console.ReadLine());
+
+                                Inventories[itemEdit].InventoryAmount = amountUpdate;
+                                Inventories[itemEdit].Cost = newValue;
+
+                                Console.WriteLine("\n - - - Edit Complete - - -\n");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Please Try Again.");
+                            }
                             //Console.Write("Enter Name of Item you want to Edit: ");
                             //string edit = Console.ReadLine();
 
