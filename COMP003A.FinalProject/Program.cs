@@ -51,7 +51,23 @@ namespace COMP003A.FinalProject
                         }
                     case 2:
                         {
+                            try
+                            {
+                                Console.Write("Enter Name of Item you want Removed: ");
+                                string removeInventory = Console.ReadLine();
 
+                                int itemRemoval = Inventories.FindIndex(inventory => inventory.InventoryName == removeInventory);
+                                if (itemRemoval != -1)
+                                {
+                                    Inventories.RemoveAt(itemRemoval);
+                                    Console.WriteLine("Inventory Removed.");
+                                }
+
+                            }
+                            catch
+                            {
+                                Console.WriteLine("Unsuccessful - Try Again.");
+                            }
                             break;
                         }
                     case 3:

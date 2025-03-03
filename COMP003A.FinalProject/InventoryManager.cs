@@ -25,6 +25,14 @@ namespace COMP003A.FinalProject
             }
         }
 
+        //public void ItemRemoval()
+        //{
+        //    Console.Write("Enter Name of Item you want Removed: ");
+        //    string removeInventory = Console.ReadLine();
+
+        //    Inventory removeItem = inventory.FindIndex(name => name == removeInventory);
+        //}
+
         //public void DisplayFullInventory()
         //{
         //    foreach (var item in inventories)
